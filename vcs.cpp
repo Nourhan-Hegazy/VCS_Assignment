@@ -11,26 +11,26 @@ int getSum(const std::vector<int>& vec) {
     return sum;
 }
 
-int getMin(const std::vector<int>& vec){
-    int min = vec[0];
+int getAverage(const std::vector<int>& vec){
+    int length = 0;
 
     for(int element : vec){
-        if(element < min){
-            min = element;
-        }
+       length +=1;
     }
-    return min;
+    int sum = getSum(vec);
+    int average = sum/length;
+    return average;
 }
 
 
 int main() {
-    std::vector<int> numbers = {1, 2, 3, 4, 0, 6, 7, 8, 9, 10};
+    std::vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     int sum = getSum(numbers);
-    int min = getMin(numbers);
+    int average = getAverage(numbers);
 
     std::cout << "Sum of the vector elements: " << sum << std::endl;
-    std::cout << "Minimum of the vector elements: " << min << std::endl;
+    std::cout << "Average of the vector elements: " << average << std::endl;
 
     return 0;
 }
