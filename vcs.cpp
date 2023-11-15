@@ -36,6 +36,7 @@ int getMin(const std::vector<int>& vec){
 
 int main() {
     std::vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    std::vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
     int sum = getSum(numbers);
     int average = getAverage(numbers);
